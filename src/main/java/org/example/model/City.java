@@ -1,7 +1,6 @@
-package org.example.service;
+package org.example.model;
 
 import lombok.*;
-import org.example.model.Employee;
 
 import javax.persistence.*;
 import java.util.List;

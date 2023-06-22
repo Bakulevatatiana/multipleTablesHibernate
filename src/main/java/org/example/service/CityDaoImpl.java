@@ -1,7 +1,7 @@
 package org.example.service;
 
-import model.City;
 import org.example.HibernateSessionFactoryUtil;
+import org.example.model.City;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
@@ -21,11 +21,21 @@ public class CityDaoImpl implements CityDao {
     }
 
     @Override
+    public City readCityById(int id) {
+        return null;
+    }
+
+    @Override
     public City getById(int id) {
         try (
                 Session session = HibernateSessionFactoryUtil.getSessionFactory().openSession()) {
             return session.get(City.class, id);
         }
+    }
+
+    @Override
+    public List<City> readAllCity() {
+        return null;
     }
 
     @Override

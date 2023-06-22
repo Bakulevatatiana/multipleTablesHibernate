@@ -1,13 +1,13 @@
 package org.example.model;
 
 import lombok.*;
-import org.example.service.City;
+import org.example.model.City;
 
 import javax.persistence.*;
 
 @Getter
 @Setter
-@AllArgsConstructor
+
 
 @ToString
 @Entity

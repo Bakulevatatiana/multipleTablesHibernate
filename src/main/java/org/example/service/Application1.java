@@ -1,10 +1,6 @@
 package org.example.service;
 
 import org.example.model.City;
-import org.example.service.CityDao;
-import org.example.service.CityDaoImpl;
-import org.example.service.EmployeeDao;
-import org.example.service.EmployeeDaoImpl;
 
 import java.util.List;
 
