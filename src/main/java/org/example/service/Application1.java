@@ -16,12 +16,12 @@ public class Application1 {
         //employeeDao.updateEmployee(employee,employeeId);
         //employeeDao.deleteEmployee(employeeDao.getById(employeeId));
         //System.out.println(employeeDao.getById(4));//
-        CityDao.add(new City("Omsk"));
-        List<City> list=CityDao.readAllCity();
+        cityDAO.add(new City("Omsk"));
+        List<City> list=cityDAO.readAllCity();
         list.forEach(System.out::println);
         City city=new City("Rostov");
-        CityDao.add(city);
-        CityDao.deleteCity(CityDao.readById(7));
-        CityDao.updateCity(new City(6,"Rostov"));
+        cityDAO.add(city);
+        cityDAO.deleteCity(cityDAO.readById(7));
+        cityDAO.updateCity(new City("Rostov",6));
     }
 }
