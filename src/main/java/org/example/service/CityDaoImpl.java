@@ -57,6 +57,11 @@ public class CityDaoImpl implements CityDao {
         }
     }
 
+    @Override
+    public City readById(int i) {
+        return null;
+    }
+
 
     @Override
     public City updateCity(City city) {

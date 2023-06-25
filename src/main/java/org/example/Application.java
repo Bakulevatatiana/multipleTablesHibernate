@@ -1,6 +1,6 @@
 package org.example;
 
-import java.sql.SQLException;
+import java.sql.*;
 
 public class Application {
     public static void main(String[]args) throws SQLException {
@@ -8,8 +8,8 @@ public class Application {
         final String password= "1234";
         final String url= "jdbc:postgresql://localhost:5432/newbase";
         try (
-            final Connection connection= DriverManager.getConnection(url,user,password);
-            PreparedStatement statement= connection.prepareStatement(""+
+                final Connection connection= DriverManager.getConnection(url,user,password);
+                PreparedStatement statement= connection.prepareStatement(""+
                     "SELECT* FROM employee WHERE id=(?)")){
                 statement.setInt(1,6);
                 final ResultSet resultSet=statement.executeQuery();

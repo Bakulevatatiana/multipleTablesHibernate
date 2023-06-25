@@ -8,7 +8,7 @@ import java.util.List;
  public interface CityDao {
 
 
-     City add(City city);
+     City  add(City city);
 
      City readCityById(int id);
 
@@ -21,6 +21,8 @@ import java.util.List;
      List<City> getAllCity();
 
      void deleteCity(City city);
+
+     City readById(int i);
  }
 
 
