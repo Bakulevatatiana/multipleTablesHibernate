@@ -1,11 +1,12 @@
 package org.example;
 
 
+import org.example.model.City;
 import org.example.model.Employee;
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 
-import java.lang.module.Configuration;
+import org.hibernate.cfg.Configuration;
 
 public class HibernateSessionFactoryUtil {
     private static SessionFactory sessionFactory;
@@ -20,8 +21,8 @@ public class HibernateSessionFactoryUtil {
 
                 Configuration configuration = new Configuration().configure();
                 configuration.addAnnotatedClass(Employee.class);
-                StandardServiceRegistryBuilder builder = new StandardServiceRegistryBuilder().applySetting(configuration.getProperties());
-                sessionFactory = configuration.buildSessionFactory(builder.build());
+                configuration.addAnnotatedClass(City.class);
+                sessionFactory = configuration.buildSessionFactory();
             } catch (Exception e) {
                 e.printStackTrace();
             }

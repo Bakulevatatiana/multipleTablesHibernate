@@ -6,7 +6,7 @@ public class Application {
     public static void main(String[]args) throws SQLException {
         final String user= "postgres";
         final String password= "1234";
-        final String url= "jdbc:postgresql://localhost:5432/newbase";
+        final String url= "jdbc:postgresql://localhost:5432/skypro";
         try (
                 final Connection connection= DriverManager.getConnection(url,user,password);
                 PreparedStatement statement= connection.prepareStatement(""+

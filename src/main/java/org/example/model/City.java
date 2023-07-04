@@ -1,3 +1,4 @@
+
 package org.example.model;
 
 import lombok.*;
@@ -23,33 +24,31 @@ public class City {
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "city")
     private List<Employee>employees;
     public City( String city_name,int city_id) {
-        this.city_name = city_name;
-        this.city_id = city_id;
+        this. cityName = city_name;
+        this.cityId = city_id;
 
     }
-    public City(String city_name){this.city_name=city_name;}
-    public City(int city_id){this.city_id=city_id;}
+    public City(String city_name){this.cityName=city_name;}
+    public City(int city_id){this.cityId=city_id;}
     public City(){}
     @Override
-    public String toString(){return  city_name;}
+    public String toString(){return  cityName;}
 
     public int getCity_id() {
-        return city_id;
+        return cityId;
     }
 
     public void setCity_id(int city_id) {
-        this.city_id = city_id;
+        this.cityId = city_id;
     }
 
     public String getCity_name() {
-        return city_name;
+        return cityName;
     }
 
     public void setCity_name(String city_name) {
-        this.city_name = city_name;
+        this.cityName = city_name;
     }
 
-    private int city_id;
-    private String city_name;
-}
 
+}
